@@ -1,16 +1,69 @@
 <template>
   <div class="bg">
-    <div class="heading">BrainForce</div>
+    <div class="title-bar">
+      <div>
+        <span class="title">
+          BrainForce
+        </span>
+        <span class="subtitle">Take control!</span>
+      </div>
+      <div>
+        <span></span>
+      </div>    
+    </div>
+    
+    <!-- <div class="icon">BrainForce</div>
     <pre class="tagline">
-        Just look...
-        &emsp;&emsp;&emsp;&emsp;  ... and think!
-    </pre>
-    <div class="msg">
+        Take control!
+    </pre> -->
+
+    <div class="content">
+      <h1>Our mission</h1>
+      <div class="flex-container">
+        <div class="msg">
+          More than <span class="emphasis"><b>4 million</b></span> americans cannot use their hands or fingers to operate a touchscreen, keyboard or mouse.
+          Our mission at <span class="inline-icon">BrainForce</span> is to empower them with <span class="emphasis"><b>hands-free</b></span> operation of computers and smartphones.
+        </div>
+        <img class="image float-right" :src="require(`../assets/Picture3.png`)">
+      </div>
+      <br>
+      <hr>
+      <!---------------------------------------------------------------------------------------------->
+      <h1>Head Mouse</h1>
+      <div class="flex-container">
+        <img class="image float-right" :src="require(`../assets/Picture1.png`)">  
+        <div class="msg">
+          Select any <span class="inline-icon">BrainForce</span> device.
+          Do you wear prescription glasses? Why not use <span class="inline-icon">BrainForce</span> glasses!
+          Don't want glasses? We have earbuds too!
+          Both have special motion sensors for tracking user's head movements.
+        </div>
+        <div class="msg">
+          Wear any device and control the mouse cursor with your head. Look up to move the cursor up, look down to move the cursor down.
+          It's like magic!
+        </div>
+        <img class="image float-right" :src="require(`../assets/Picture2.png`)">
+      </div>
+      <hr>
+      <!---------------------------------------------------------------------------------------------->
+      <h1>Want to try it out?</h1>
+      <div class="flex-container">
+        <div class="msg">
+          Sign up today for a demo! We will contact you for next steps. 
+        </div>      
+      </div>
+      <br>
+      <br>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdxhVYFVfOgdrkV48Mt5FEHtOUvk6_XwhyupsekxMf6H9wh1Q/viewform?embedded=true" width="640" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+    
+    <!-- <div class="msg">
       Coming soon..
     </div>
     <a class="button" href="http://demo.brainforce.us/">
       Try our demo
-    </a>
+    </a> -->
+    
   </div>
 </template>
 
@@ -24,31 +77,89 @@ export default {
 <style scoped lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
-$padding: 120px;
+$title-bar-padding: 15px;
+$title-font-size: 40px;
 $box-shadow: 0 5px 20px rgba(0,0,0,0.19), 0 3px 6px rgba(0,0,0,0.23);
 $box-shadow-highlight: 0 5px 30px rgba(0,0,0,0.19), 0 3px 15px rgba(0,0,0,0.23);
+$content-padding: 40px;
+$orange: #f46524;
 
 .bg{
   height: 100%;
   text-align: center;
-  background-color: #fc5603;
-  font-family:  "Lucida Grande", sans-serif;
+  // background-color: #fc5603;
+  font-family:  Arial, Helvetica, sans-serif;
 }
-.heading{
-  padding-top: $padding;
-  height: calc(100% - $padding);
+.flex-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.title-bar{
+  @extend .flex-container;
+  justify-content: space-between;
+  width: 100%;
+  padding: $title-bar-padding;
+  background-color: $orange;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.title{
   font-family: 'Lobster', cursive;
-  font-size: 7rem;
-  color: white;
+  font-size: $title-font-size;
 }
-.tagline{
-  color: white;
+.subtitle{
   font-style: italic;
-  font-size: 2rem;
+  font-family: Courgette;
+}
+.inline-icon{
+  font-family: 'Lobster', cursive;
+  color: $orange;
+}
+// .icon{
+//   font-family: 'Lobster', cursive;
+//   font-size: 7rem;
+//   color: #fc5603;
+// }
+// .tagline{
+//   color: #fc5603;
+//   font-style: italic;
+//   font-size: 2rem;
+// }
+.content{
+  padding: $content-padding;
+  margin: auto;
+  margin-top: ($title-font-size + 2*$title-bar-padding - $content-padding);
+}
+h1{
+  color: $orange;
+  font-family: "Courgette";
+  font-size: 3rem;
+}
+.emphasis{
+  color: $orange;
+  font-size-adjust: 2;
 }
 .msg{
-  
-  font-size: 1.5rem;
+  // display: inline;
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 1.2rem;
+  max-width: 400px;
+  margin: 10px;
+}
+// .float-right{
+//   position: absolute;
+//   right: 0px;
+// }
+.image{
+  width: 100%;
+  max-width: 600px;
 }
 $btn-color: #673AB7;
 .button{
