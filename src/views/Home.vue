@@ -38,7 +38,7 @@
       <h1>Want to try it out?</h1>
       <div class="flex-container">
         <div class="msg">
-          Sign up for a demo today! Either fill out the form below or reach out to us at:
+          Sign up for a demo today! Either fill out the form below or email us at:
           <ul>
             <li><a href="mailto:parthshah@brainforce.us">parthshah@brainforce.us</a></li>
             <li><a href="mailto:mohitpatil@brainforce.us">mohitpatil@brainforce.us</a></li>
