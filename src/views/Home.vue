@@ -1,17 +1,6 @@
 <template>
   <div class="bg">
-    <div class="title-bar">
-      <div>
-        <span class="title">
-          BrainForce
-        </span>
-        <span class="subtitle">Take control!</span>
-      </div>
-      <div>
-        <span></span>
-      </div>    
-    </div>
-    
+   
     <!-- <div class="icon">BrainForce</div>
     <pre class="tagline">
         Take control!
@@ -49,12 +38,17 @@
       <h1>Want to try it out?</h1>
       <div class="flex-container">
         <div class="msg">
-          Sign up today for a demo! We will contact you for next steps. 
+          Sign up for a demo today! Either fill out the form below or reach out to us at:
+          <ul>
+            <li><a href="mailto:parthshah@brainforce.us">parthshah@brainforce.us</a></li>
+            <li><a href="mailto:mohitpatil@brainforce.us">mohitpatil@brainforce.us</a></li>
+          </ul>
         </div>      
       </div>
       <br>
       <br>
       <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdxhVYFVfOgdrkV48Mt5FEHtOUvk6_XwhyupsekxMf6H9wh1Q/viewform?embedded=true" width="640" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      
     </div>
     
     <!-- <div class="msg">
@@ -89,33 +83,6 @@ $orange: #f46524;
   text-align: center;
   // background-color: #fc5603;
   font-family:  Arial, Helvetica, sans-serif;
-}
-.flex-container{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-evenly;
-}
-.title-bar{
-  @extend .flex-container;
-  justify-content: space-between;
-  width: 100%;
-  padding: $title-bar-padding;
-  background-color: $orange;
-  color: white;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-}
-.title{
-  font-family: 'Lobster', cursive;
-  font-size: $title-font-size;
-}
-.subtitle{
-  font-style: italic;
-  font-family: Courgette;
 }
 .inline-icon{
   font-family: 'Lobster', cursive;
@@ -153,10 +120,9 @@ h1{
   max-width: 400px;
   margin: 10px;
 }
-// .float-right{
-//   position: absolute;
-//   right: 0px;
-// }
+a{
+  color: $orange;
+}
 .image{
   width: 100%;
   max-width: 600px;
